@@ -1,0 +1,155 @@
+$light-blue: #0090e4
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+html
+    font-family: 'Montserrat', sans-serif
+
+button
+    border: none
+    cursor: pointer
+
+ul
+    list-style: inside
+
+.row
+    width: 100%
+    margin: 30px
+    text-align: center
+
+.todo
+    position: absolute
+    top: 20%
+    left: 50%
+    transform: translate(-50%, -20%)
+    width: 80%
+    max-width: 900px
+    box-shadow: 1px 1px 4px #000
+    border-radius: 10px
+
+    .header
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+        width: 100%
+        padding: 20px 0
+        color: #fff
+        background-image: linear-gradient(35deg, rgba(0,44,97,1) 0%, rgba(0,131,158,1) 100%)
+        border-radius: 10px 10px 0 0
+
+        .todo-input, .add-btn
+            margin: 0 5px
+            padding: 5px 15px
+            border-radius: 5px
+            box-shadow: 1px 1px 4px #000
+
+        .todo-input
+            width: 70%
+            border: none
+    
+        .add-btn
+            text-transform: uppercase
+            background-color: #fff
+   
+        .add-btn:hover
+            background-color: #ccc
+
+    .todo-list
+        
+        h3
+            text-align: center
+            text-transform: uppercase
+            margin: 15px 0
+
+        .alert-info
+            text-align: center
+            color: $light-blue
+            margin: 0 0 15px 0
+
+        ul
+            list-style-type: none
+
+            li
+                display: flex
+                justify-content: space-between
+                align-items: center
+                width: 90%
+                margin: 5px auto
+                padding: 0 15px
+                border-radius: 5px
+                background-color: #eee
+
+                .tools
+                    min-width: 142px
+
+                button
+                    display: inline-block
+                    padding: 15px
+                    font-weight: bold
+                    text-transform: uppercase
+                    
+                
+                button:hover
+                    background-color: #ccc
+
+                .complete
+                    color: $light-blue
+
+                .edit
+                    color: #0b9e2b
+                    
+                .delete
+                    color: tomato
+
+            .completed
+                color: #666!important
+                font-style: italic
+                text-decoration: line-through
+
+.popup
+    position: absolute
+    bottom: 30px
+    left: 50%
+    display: none
+    transform: translateX(-50%)
+    width: 80%
+    max-width: 900px
+    border-radius: 5px   
+    background-color: #2d3c52
+    box-shadow: 1px 1px 4px #000
+    color: #fff
+
+    h3
+        text-align: center
+        margin: 15px 0 0 0
+
+    .popup-body
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+
+        .popup-info
+            margin: 10px 0 20px 0
+
+        .popup-input
+            width: 90%
+            border: none
+            margin: 0 5px
+            padding: 5px 15px
+            border-radius: 5px
+            box-shadow: 1px 1px 4px #000
+
+        button
+            min-width: 30%
+            margin: 0 10px
+            padding: 10px 15px
+            border-radius: 5px
+            box-shadow: 1px 1px 4px #000
+            background-color: #fff
+            text-transform: uppercase
+
+        button:hover
+            background-color: #ccc
